@@ -17,5 +17,5 @@ fi
 
 echo $STATUS
 
-curl -H "Authorization: token $WERCKER_GITHUB_STATUS_TOKEN" -v -d $STATUS \
+curl -H "Authorization: token $WERCKER_GITHUB_STATUS_TOKEN" -v -d "$STATUS" \
 	https://api.github.com/repos/$WERCKER_GIT_OWNER/$WERCKER_GIT_REPOSITORY/statuses/$WERCKER_GIT_COMMIT
