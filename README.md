@@ -1,5 +1,5 @@
 # Github Status API Wercker Step ☑️
-Update Github branch/PR/revision status via the [Github Status API](https://developer.github.com/v3/repos/statuses/) from [Wercker](http://www.wercker.com/)
+Update Github branch/PR/revision status via the [Github Status API](https://developer.github.com/v3/repos/statuses/) from a [Wercker](http://www.wercker.com/) pipeline/build step.
 
 # Preview
 This is what a Github Status may look like. The icon will be that of the token owner (see below for more on tokens).
@@ -16,6 +16,9 @@ Use this step twice:
 * `msg`: A short description of the status
 * `fail`: Same as `msg`, used in case of a build failure
 * `url`: The target URL to associate with this status. The url must begin with `https://`.
+
+# Github token generation
+This step will require a Github token with at least `repo:status` permissions. You can generate a new "Personal access token" by clicking [here](https://github.com/settings/tokens/new?description=Github+status+werker+step&scopes=repo:status) and then clicking "Generate token"
 
 # Example
 ```yml
@@ -39,6 +42,3 @@ deploy:
   steps:
     ...
  ```
-
- # Github token generation
- This step will require a Github token with at least `repo:status` permissions. You can generate a new "Personal access token" by clicking [here](https://github.com/settings/tokens/new?description=Github+status+werker+step&scopes=repo:status) and then clicking "Generate token"

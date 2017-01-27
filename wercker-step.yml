@@ -1,5 +1,5 @@
 name: github-status
-version: 0.0.1
+version: 0.0.2
 description: Update Github with a status via the Status API
 keywords:
   - status
