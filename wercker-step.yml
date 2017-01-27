@@ -1,0 +1,24 @@
+name: github-status
+version: 0.0.1
+description: Update Github with a status via the Status API
+keywords:
+  - status
+  - github
+  - github status api
+properties:
+  token:
+    type: string
+    required: true
+  context:
+    type: string
+    required: false
+  msg:
+    type: string
+    required: false
+  fail:
+    type: string
+    default: all
+    required: false
+  url:
+    type: string
+    required: false
